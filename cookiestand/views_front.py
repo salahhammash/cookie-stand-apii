@@ -8,6 +8,7 @@ class CookieStandListView(LoginRequiredMixin, ListView):
     template_name = "cookiestand/cookiestand_list.html"
     model = CookieStand
     context_object_name = "cookiestand"
+    # we will do the loop in list.html on context_object_name
 
 
 class CookieStandDetailView(LoginRequiredMixin, DetailView):

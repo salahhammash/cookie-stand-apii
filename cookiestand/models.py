@@ -13,11 +13,17 @@ class CookieStand(models.Model):
 
     # def __str__(self):
     #     return self.name
-      
+
+
+
     name = models.CharField(max_length=256)
+    #make sure from the names here
+
     reviewer = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, null=True, blank=True
     )
+    # make sure from the (name of) reviewer ,cuz we will send it in creat.html & update.html as .reviewer --> like this  ({% for value, choice in form.fields.reviewer.choices %}
+
     description = models.TextField(default="", null=True, blank=True)
     hourly_sales = models.JSONField(default=list, null=True)
     minimum_customers_per_hour = models.IntegerField(default=0)
@@ -27,6 +33,8 @@ class CookieStand(models.Model):
 
     def __str__(self):
         return self.name
+    # make sure from the names here
+
 
     def get_absolute_url(self):
         return reverse('cookiestand_detail', args=[str(self.id)])
