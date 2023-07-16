@@ -4,18 +4,6 @@ from django.urls import reverse
 
 
 class CookieStand(models.Model):
-    # name = models.CharField(max_length=256)
-    # rating = models.IntegerField(default=0, blank=True)
-    # reviewer = models.ForeignKey(
-    #     get_user_model(), on_delete=models.CASCADE, null=True, blank=True
-    # )
-    # description = models.TextField(default="", null=True, blank=True)
-
-    # def __str__(self):
-    #     return self.name
-
-
-
     name = models.CharField(max_length=256)
     #make sure from the names here
 

@@ -5,11 +5,17 @@
 
   <div
     class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-    <form class="space-y-6" method="POST">
+    <form method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type='submit'/>
+  </form>
+
+    <!-- <form class="space-y-6" method="POST">
       {% csrf_token %}
       <h5 class="text-xl font-medium text-gray-900 dark:text-white">Create a cookiestand</h5>
       <div>
-        <label for="id_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">cookiestand location Name</label>
+        <label for="id_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">cookiestand  Name</label>
         <input type="text" name="name" id="id_name"
                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                placeholder="e.g. celery" required>
@@ -21,7 +27,8 @@
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         value="0" min="0" max="5" required>
       </div>
-      {% comment %} <div>
+      {% comment %}
+      <div>
         <label for="id_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hourly Sales</label>
         <input type="list" name="hourly_sales" id="hourly_sales" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="0" min="0" required>
       </div> {% endcomment %}
@@ -51,7 +58,8 @@
         Create
       </button>
 
-    </form>
+    </form> -->
+
   </div>
 
 {% endblock content %}
