@@ -25,7 +25,7 @@ class CookieStandUpdateView(LoginRequiredMixin, UpdateView):
 class CookieStandCreateView(LoginRequiredMixin, CreateView):
     template_name = "cookiestand/cookiestand_create.html"
     model = CookieStand
-    # fields = ["name", "rating", "reviewer"] 
+    # fields = ["name", "rating", "reviewer"]
     fields =  "__all__"
 
 

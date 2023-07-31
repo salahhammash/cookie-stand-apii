@@ -17,3 +17,4 @@ application = get_wsgi_application()
 
 # vercel deployment requires "app"
 app = application
+ 
